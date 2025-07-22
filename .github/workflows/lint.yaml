@@ -5,15 +5,15 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-steps:
-  - uses: actions/checkout@v4
-  - name: Set up Python
-    uses: actions/setup-python@v4
-    with:
-      python-version: '3.11'
-  - name: Install dependencies
-    run: |
-      pip install flake8
-  - name: Run Linter
-    run: |
-      flake8 task_1/main.py --max-line-length=88
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install flake8
+      - name: Run Linter
+        run: |
+          flake8 task_1/main.py --max-line-length=88
